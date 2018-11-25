@@ -8,7 +8,7 @@ $(function(){
 
     //获取轮播图
     function  getSwiperdata(){
-        $.get('http://api.pyg.ak48.xyz/api/public/v1/home/swiperdata',function(result){
+        $.get('home/swiperdata',function(result){
             if(result.meta.status == 200){
                 var html = template('swiperTpl',{data:result.data});
                 $('.pyg_slides').html(html);
@@ -26,7 +26,7 @@ $(function(){
     }
     //获取导航栏
     function getNavData(){
-        $.get('http://api.pyg.ak48.xyz/api/public/v1/home/catitems',function(result){
+        $.get('home/catitems',function(result){
             if(result.meta.status == 200){
                 $('.pyg_nav').html(template('navTpl',{data:result.data}));
             }
@@ -34,7 +34,7 @@ $(function(){
     }
     //获取商品列表
     function getGroup(){
-        $.get('http://api.pyg.ak48.xyz/api/public/v1/home/goodslist',function(result){
+        $.get('home/goodslist',function(result){
             if(result.meta.status == 200){
                 $('.pyg_list').html(template('listTpl',{data:result.data}));
             }

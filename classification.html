@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 第三方css文件 -->
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 当前页面的样式文件 -->
+    <link rel="stylesheet" href="./css/classification.css">
+    <title>分类</title>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <div class="pyg_header">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </div>
+    <!-- 商品部分 -->
+    <div class="classification_view">
+        <div class="classification_view_left">
+
+        </div>
+        <div class="classification_view_right">
+            
+        </div>
+    </div>
+    <!-- 底部部分 -->
+    <div class="pyg_bottom">
+        <a href="index.html">
+            <span class="fa fa-home"></span>
+            <p>首页</p>
+        </a>
+        <a href="classification.html">
+            <span class="fa fa-list-ul"></span>
+            <p>分类</p>
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-cart-plus"></span>
+            <p>购物车</p>
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-user"></span>
+            <p>我的</p>
+        </a>
+    </div>
+</body>
+<!-- 模板引擎 -->
+<!-- 分类列表导航的模板 -->
+<script type="text/html" id="classificationNavTpl">
+    <ul>
+        {{each data value index}}
+        {{if index == 0}}
+        <li class="active">{{value.cat_name}}</li>
+        {{/if}}
+
+        {{if index !=0 }}
+        <li>{{value.cat_name}}</li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</script>
+<!-- 分类列表导航的模板 -->
+<!-- 分类商品展示 -->
+<script type="text/html" id="classificationTpl">
+    {{each data value index}}
+    <div class="goods_item">
+            <div class="goods_title">{{value.cat_name}}</div>
+            <div class="goods_content">
+                <ul>
+                    {{each value.children value1 index1}}
+                    <li>
+                        <a href="javascript:;">
+                            <img src="http://api.pyg.ak48.xyz/{{value1.cat_icon}}"
+                                alt="">
+                            <div>{{value1.cat_name}}</div>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    {{/each}}
+</script>
+<!-- 分类商品展示 -->
+<!-- 模板引擎 -->
+<!-- 第三方js文件 -->
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./lib/iscroll/iscroll.js"></script>
+<!-- 公共js文件 -->
+<script src="./js/common.js"></script>
+<!-- 当前页面的js文件 -->
+<script src="./js/classification.js"></script>
+
+</html>

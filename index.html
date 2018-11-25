@@ -40,7 +40,7 @@
             <span class="fa fa-home"></span>
             <p>首页</p>
         </a>
-        <a href="javascript:;">
+        <a href="classification.html">
             <span class="fa fa-list-ul"></span>
             <p>分类</p>
         </a>
@@ -104,7 +104,7 @@
                 <a href="javascript:;">
                     <img src="{{value1.goods_small_logo}}" alt="">
                     <p>{{value1.goods_name}}</p>
-                    <span>￥999</span>
+                    <span>￥{{value1.goods_price}}</span>
                 </a>
                 <a href="javascript:;" class="mui-btn mui-btn-primary mui-btn-outlined">
                     找相似
@@ -122,6 +122,8 @@
 <script src="./lib/zepto/zepto.js"></script>
 <script src="./lib/arttemplate/template-web.js"></script>
 <script src="./lib/iscroll/iscroll.js"></script>
+<!-- 公共js文件 -->
+<script src="./js/common.js"></script>
 <!-- 首页js文件 -->
 <script src="./js/index.js"></script>
 

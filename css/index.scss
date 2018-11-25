@@ -57,20 +57,3 @@
         }
     }
 }
-//底部部分
-.pyg_bottom{
-    background-color: #fff;
-    display: flex;
-    >a{
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        text-align: center;
-        font-size: 20px;
-        color: #000;
-        padding-top: 5px;
-        >P{
-            color: #000;
-        }
-    }
-}

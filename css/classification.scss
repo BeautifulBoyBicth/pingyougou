@@ -1,0 +1,66 @@
+//商品部分
+.classification_view{
+    height: 100%;
+    display: flex;
+    .classification_view_left,.classification_view_right{
+        height: 100%;
+        overflow: hidden;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .classification_view_left{
+        width: 80px;
+        >ul{
+            >li{
+                   height: 40px;
+                   width: 100%;
+                   text-align: center;
+                   line-height: 40px;
+                   color: #000;
+                   font-size: 16px;
+    
+            }
+        }
+    }
+    .classification_view_right{
+        flex: 1;
+        background-color: #fff;
+        .goods_item{
+            .goods_title{
+                padding-left: 10px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+                color: #0094ff;
+            }
+            .goods_content{
+                >ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    >li{
+                        width: 33.33%;
+                        >a{
+                            >img{
+                                display: block;
+                                width: 80%;
+                                margin: 0 auto;
+                            }
+                            >div{
+                                text-align: center;
+                                color: #000;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.active{
+    background-color: #fff;
+    border-left: 3px solid #0094ff;
+}
